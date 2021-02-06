@@ -78,7 +78,7 @@ export default function Login(){
             <div className='login'>
                 <div className='login__container'>
                     <div className='login__text'>
-                        <img src="ya-hala.png" style={{width: '50%'}} />
+                        <img src="ya-hala.png" alt="ChatiZone" style={{width: '50%'}} />
                         <h1>ChatiZone</h1>
                     </div>
                     <div id="firebaseui-auth-container"></div>
