@@ -16,6 +16,7 @@ import AddCircleIcon from '@material-ui/icons/AddCircle';
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 
 import styles from './styles';
+import './sty.css'
 
 let i;
 
