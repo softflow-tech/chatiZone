@@ -58,7 +58,7 @@ export default function Chat(){
                 </div>
                 <div className='chat__headerRight'>
                     <IconButton>
-                        <AttachFileIcon />
+                        <AttachFileIcon style={{visibility: 'hidden'}} />
                     </IconButton>  
                     <IconButton>
                         <MoreVertIcon />
