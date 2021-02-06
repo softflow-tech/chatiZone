@@ -74,21 +74,41 @@ export default function Login(){
             .catch((error) => alert(error.message));
     };
     return(
-        <div className='login'>
-            <div className='login__container'>
-                <div className='login__text'>
-                    <h1>ChatiZone</h1>
-                </div>
-                <div id="firebaseui-auth-container"></div>
-                <div id="loader">Loading...</div>
-                <p>Or login with</p>
+        <>
+            <div className='login'>
+                <div className='login__container'>
+                    <div className='login__text'>
+                        <img src="ya-hala.png" style={{width: '50%'}} />
+                        <h1>ChatiZone</h1>
+                    </div>
+                    <div id="firebaseui-auth-container"></div>
+                    <div id="loader">Loading...</div>
+                    
 
-                <div onClick={signIn} id="googleLog">
-                    <img src="icon-google.png" alt="GOOGLE" />
+                    <p>Or login with</p>
+
+                    <div onClick={signIn} id="googleLog">
+                        <img src="icon-google.png" alt="GOOGLE" />
+                    </div>
+                    
                 </div>
-				
             </div>
-        </div>
+
+            <div class="area" style={{margin: '0px', padding: '0px', position: 'absolute', zIndex: '-1', background: 'linear-gradient(63deg, rgba(70,74,162,1) 39%, rgba(78,84,200,1) 86%)'}}>
+                <ul class="circles">
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                </ul>
+            </div >
+        </>
     );
 }
 

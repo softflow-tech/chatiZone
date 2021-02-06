@@ -11,7 +11,7 @@ a:focus {
     /* background-color: rgb(189, 186, 186); */
     height: 100vh;
     /* background-color: darkcyan; */
-    background: linear-gradient(63deg, rgba(42,187,242,1) 60%, rgba(25,110,169,1) 40%, rgba(12,57,74,1));
+    /* background: linear-gradient(63deg, rgba(42,187,242,1) 60%, rgba(25,110,169,1) 40%, rgba(12,57,74,1)); */
 }
 
 .app__body{
