@@ -28,10 +28,10 @@ class ChatViewComponent extends React.Component {
             Your conversation with {this.props.chat.users.filter(_usr => _usr !== this.props.user)[0]}
           </div>
           <main id='chatview-container' className={classes.content} style={{
-            top: '50px',
+            top: '58px',
             color: 'white',
             width: 'calc(100% - 300px)',
-            height: '80vh',
+            height: '75vh',
             padding: '25px',
             overflow: 'auto',
             position: 'absolute',

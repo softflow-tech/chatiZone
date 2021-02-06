@@ -10,7 +10,28 @@ const styles = theme => ({
       overflowY: 'auto',
       top: '50px',
       width: '35vw',
-      position: 'absolute'
+      position: 'absolute',
+
+      '&::-webkit-scrollbar-track':
+        {
+          webkitBoxShadow: 'inset 0 0 6px rgba(0,0,0,0.3)',
+          borderRadius: '10px',
+          backgroundColor: 'rgb(36, 39, 43)',
+        },
+
+        '&::-webkit-scrollbar':
+        {
+          width: '12px',
+          backgroundColor: 'rgb(36, 39, 43)',
+        },
+
+        '&::-webkit-scrollbar-thumb':
+        {
+          borderRadius: '10px',
+          webkitBoxShadow: 'inset 0 0 6px rgba(0,0,0,.3)',
+          backgroundColor: '#3f51b5',
+        },
+
     },
   
     userSent: {

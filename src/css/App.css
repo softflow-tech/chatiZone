@@ -1,21 +1,7 @@
-a {
-    text-decoration: inherit;
-    color: whitesmoke;
-}
-
-a:hover {
-    text-decoration: none;
-    color: whitesmoke;
-}
 
 a:focus {
     text-decoration: none;
-    color: whitesmoke;
-}
-
-a:active {
-    text-decoration: none;
-    color: whitesmoke;
+    color: rgb(17, 151, 230);
 }
 
 
@@ -32,13 +18,12 @@ a:active {
     display: flex;
     background-color: whitesmoke;
     height: 90vh;
-    width: 90vh;
     box-shadow: -1px 4px 20px -6px black;
 
     min-height: 450px;
     min-width: 700px;
     height: 90vh;
-    /* width: 60%; */
+    width: 65%;
     overflow: auto;
     box-shadow: black -1px 4px 20px -6px;
 }

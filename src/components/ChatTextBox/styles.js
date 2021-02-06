@@ -10,17 +10,27 @@ const styles = theme => ({
   
     chatTextBoxContainer: {
       position: 'absolute',
-      bottom: '15px',
-      left: '315px',
+      bottom: '0',
+      left: '300px',
       boxSizing: 'border-box',
       overflow: 'auto',
-      width: 'calc(100% - 300px - 50px)'
+      width: 'calc(100% - 300px)',
+
+      display: 'flex',
+      justifyContent: 'space-between',
+      alignItems: 'center',
+      height: '62px',
+      borderTop: '1px solid lightgray',
     },
   
     chatTextBox: {
       width: 'calc(100% - 25px)',
-      color: 'white',
-    }
+      color: 'black',
+      '&:focus': {
+          outline: 'none',
+        }
+    },
+
   
   });
   

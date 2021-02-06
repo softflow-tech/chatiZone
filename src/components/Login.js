@@ -77,7 +77,7 @@ export default function Login(){
         <div className='login'>
             <div className='login__container'>
                 <div className='login__text'>
-                    <h1>Sign into ChatiZone</h1>
+                    <h1>ChatiZone</h1>
                 </div>
                 <div id="firebaseui-auth-container"></div>
                 <div id="loader">Loading...</div>
