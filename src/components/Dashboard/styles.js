@@ -6,7 +6,7 @@ const styles = theme => ({
       width: '300px',
       borderRadius: '0px',
       backgroundColor: '#3f51b5',
-      height: '47px',
+      height: '10px',
       color: 'white'
     }
   });
