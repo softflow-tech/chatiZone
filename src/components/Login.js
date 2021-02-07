@@ -94,9 +94,23 @@ export default function Login(){
                 <div onClick={signIn} id="googleLog">
                     <img src={google} alt="Google Login" />
                 </div>
-				
             </div>
-        </div>
+
+            <div class="area" style={{margin: '0px', padding: '0px', position: 'absolute', zIndex: '-1', background: 'linear-gradient(63deg, rgba(70,74,162,1) 39%, rgba(78,84,200,1) 86%)'}}>
+                <ul class="circles">
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                </ul>
+            </div >
+        </>
     );
 }
 
