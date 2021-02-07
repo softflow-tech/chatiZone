@@ -1,15 +1,20 @@
 import React from 'react'
 import firebase from 'firebase'
+import Avatar from '@material-ui/core/Avatar';
+import { makeStyles } from '@material-ui/core/styles';
 
 import '../css/Login.css';
 import { actionTypes } from './reducer';
 import { useStateValue } from "./StateProvider"
 import db , { auth , provider}  from '../firebase'
+import logoimg from './logo.png'; 
+import google from './icon-google.png';
 
 var firebaseui = require('firebaseui');
 const ui = new firebaseui.auth.AuthUI(firebase.auth());
 
 export default function Login(){
+    const classes = useStyles();
     const createUser = (uid,email, displayName, photoURL) => {
         db.collection('users').doc(email).set({
             uid: uid,
@@ -77,14 +82,17 @@ export default function Login(){
         <div className='login'>
             <div className='login__container'>
                 <div className='login__text'>
+                <div className={classes.root}>
+                    <img src={logoimg} alt='ChatiZone Logo' style={{width:200, height:200}}/>                </div>
                     <h1>ChatiZone</h1>
                 </div>
-                <div id="firebaseui-auth-container"></div>
+                <div id="firebaseui-auth-container" style={{fontFamily:"monospace"}}></div>
                 <div id="loader">Loading...</div>
-                <p>Or login with</p>
+                <br/>
+                <p>Alternative Login Methods</p>
 
                 <div onClick={signIn} id="googleLog">
-                    <img src="icon-google.png" alt="GOOGLE" />
+                    <img src={google} alt="Google Login" />
                 </div>
 				
             </div>
@@ -97,3 +105,21 @@ function avataImage(params) {
     var matches = sequence.match(/[A-z]/g);
     return(matches.join(''));
 }
+
+
+const useStyles = makeStyles((theme) => ({
+  root: {
+    display: 'flex',
+    '& > *': {
+      margin: theme.spacing(1),
+    },
+  },
+  small: {
+    width: theme.spacing(3),
+    height: theme.spacing(3),
+  },
+  large: {
+    width: theme.spacing(20),
+    height: theme.spacing(20),
+  },
+}));

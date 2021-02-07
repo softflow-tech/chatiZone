@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom';
-import EmailIcon from '@material-ui/icons/Email';
-import ChatIcon from '@material-ui/icons/Chat';
 import { IconButton } from "@material-ui/core";
+import Button from '@material-ui/core/Button';
+import ChatIcon from '@material-ui/icons/Chat';
+import EmailIcon from '@material-ui/icons/Email';
 import PersonAddIcon from '@material-ui/icons/PersonAdd';
 import PersonAddDisabledIcon from '@material-ui/icons/PersonAddDisabled';
 import db from '../firebase'
@@ -98,14 +99,28 @@ export default function Account() {
                     <h1>{userDetails.displayName}</h1>
                     <br />
                     {/* <h2>Account information: </h2> */}
-                    <p><b><EmailIcon style={{ fontSize: 200 }} /> </b>{userDetails.email}</p>
-                    <IconButton>
-                        <ChatIcon onClick={slideRight} />
-                    </IconButton>
-                    <IconButton>
-                        <PersonAddIcon onClick={addFriend} style={friends === 'false' ? { fontSize: 40 } : { display: 'none' }} />
-                        <PersonAddDisabledIcon onClick={removeFriend} style={friends === 'true' ? { fontSize: 40 } : { display: 'none' }} />
-                    </IconButton>
+                    <div className='account__userinfo'>
+                        <div className='account__email'>
+                            <p><b><EmailIcon style={{ marginRight: '5px' }} /></b> {userDetails.email}</p>
+                        </div>
+                        <div className='account__icons'>
+                            <IconButton>
+                                <PersonAddIcon onClick={addFriend} style={friends === 'false' ? { fontSize: 40 } : { display: 'none' }} />
+                                <PersonAddDisabledIcon onClick={removeFriend} style={friends === 'true' ? { fontSize: 40 } : { display: 'none' }} />
+                            </IconButton>
+                        </div>
+                    </div>
+                    <div style={{textAlign:'center', marginTop: '20%'}}>
+                    <Button
+                        variant="contained"
+                        color="primary"
+                        endIcon={<ChatIcon style={{color:'inherit'}} />}
+                        onClick={slideRight}
+                    >
+                        Send New Message
+                    </Button>
+
+                    </div>
                 </div>
 
             </div>
@@ -124,9 +139,10 @@ export default function Account() {
                     <br />
                     <h1>{userDetails.displayName}</h1>
                     <br />
-                    {/* <h2>Account information: </h2> */}
-                    <p><b><EmailIcon style={{ fontSize: 200 }} /> </b>{userDetails.email}</p>
-                    <p><b>Last Login: </b>{user.metadata.lastSignInTime}</p>
+                    <div className='account__email'>
+                        <p><b><EmailIcon style={{ fontSize: 200 }} /> </b>{userDetails.email}</p>
+                        <p><b>Last Login: </b>{user.metadata.lastSignInTime}</p>
+                    </div>
                 </div>
             </div>
         )

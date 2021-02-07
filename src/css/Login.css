@@ -4,6 +4,7 @@
     background: #fff;
     border-radius: 10px;
     overflow: hidden;
+    font-family: monospace;
     box-shadow: 0 3px 20px 0px rgb(0 0 0 / 10%);
     -moz-box-shadow: 0 3px 20px 0px rgba(0, 0, 0, 0.1);
     -webkit-box-shadow: 0 3px 20px 0px rgb(0 0 0 / 10%);
@@ -13,7 +14,7 @@
 
 .login h1 {
     display: block;
-    font-family: SourceSansPro-Bold;
+    font-family: monospace;
     font-size: 30px;
     color: #4b2354;
     line-height: 1.2;
@@ -23,7 +24,7 @@
 }
 
 .login input {
-    font-family: SourceSansPro-Bold;
+    font-family: monospace;
     font-size: 16px;
     color: #4b2354;
     line-height: 1.2;
@@ -32,9 +33,9 @@
     height: 62px;
     background: transparent;
     padding: 0 20px 0 23px;
-
+    
     outline: none;
-
+    
     position: relative;
     background-color: #fff;
     border-radius: 20px;
@@ -48,7 +49,7 @@
     font-weight: 400;
     line-height: 1.5;
     color: #212529;
-
+    
     box-shadow: 0 5px 30px 0px rgb(0 0 0 / 10%);
     -moz-box-shadow: 0 5px 30px 0px rgba(0, 0, 0, 0.1);
     -webkit-box-shadow: 0 5px 30px 0px rgb(0 0 0 / 10%);
@@ -58,7 +59,7 @@
     -o-transition: all 0.4s;
     -moz-transition: all 0.4s;
     transition: all 0.4s;
-
+    
 }
 
 
@@ -89,11 +90,11 @@
     -webkit-box-shadow: 0 10px 30px 0px rgb(189 89 212 / 50%);
     -o-box-shadow: 0 10px 30px 0px rgba(189, 89, 212, 0.5);
     -ms-box-shadow: 0 10px 30px 0px rgba(189, 89, 212, 0.5);
-
+    
     outline: none !important;
     border: none;
     background: transparent;
-
+    
     margin: 0;
 }
 .login__container {
@@ -115,6 +116,7 @@
     text-transform: inherit !important;
     background-color: rgb(119, 119, 255) !important;
     color: white;
+    font-family: monospace !important;
 }
 
 .login__text{
